@@ -32,12 +32,14 @@ In addition, this project will include:
 
 ## Wireframes
 
-### Initial Landing Page
+###             Initial Landing Page:
+
 ![initial landing page](./wireframes/landing_page.png)
 
 - Landing page will give some background on what the user will encounter within the project and will have a button to move to the first slide
 
-### Introduction Page
+###             Introduction Page:
+
 ![introduction page](./wireframes/the_mix.png)
 
 - The opening page will introduce the concept of a "mix" and the mix visualization format
@@ -45,7 +47,8 @@ In addition, this project will include:
 - Sections will "enter" the page via animation as indicated by the numbered ovals
 - General nav at the bottom of the page will allow user to jump between sections
 
-### Processor demos
+###             Processor demos:
+
 ![individual processor demo](./wireframes/-processor-page-.png)
 
 - Slides for each processor type will include a visualization highlighting the element being used for this processor demo
