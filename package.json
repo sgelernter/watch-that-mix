@@ -1,20 +1,41 @@
 {
   "name": "javascript_project",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Functionality & MVPs",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.19.2",
+    "css-loader": "^6.5.1",
     "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.4.5",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
     "webpack": "^5.64.4"
   },
   "devDependencies": {
     "webpack-cli": "^4.9.1"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgelernter/watch-that-mix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sgelernter/watch-that-mix/issues"
+  },
+  "homepage": "https://github.com/sgelernter/watch-that-mix#readme"
 }
