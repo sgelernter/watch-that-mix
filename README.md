@@ -1,8 +1,16 @@
 ## Background
 
-    Pretty much everyone enjoys music, but most people know little if anything about how music is produced. The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb and a delay in the context of music production. The goal of this project is to teach anyone interested in the process of how music gets made about some of the tools producers use when turning raw recorded performance into a finished, radio-ready track. 
+    Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
+    The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
+    music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
+    and a delay in the context of music production. The goal of this project is to teach anyone interested in 
+    the process of how music gets made about some of the tools producers use when turning raw recorded performance 
+    into a finished, radio-ready track. 
     
-    By providing an engaging, responsive interface to experiment with effects of various types of processing in-context and in real time, this project will allow users to develop some hands-on knowledge of the music-making process that will hopefully enhance their understanding and appreciation for all the work that goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint.    
+    By providing an engaging, responsive interface to experiment with effects of various types of processing 
+    in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
+    music-making process that will hopefully enhance their understanding and appreciation for all the work that 
+    goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint.    
 
 
 ## Functionality & MVPs
@@ -23,16 +31,23 @@ In addition, this project will include:
 - A major sense of accomplishment on behalf of its author if/when he manages to get all of the above done
 
 ## Wireframes
+
+### Initial Landing Page
 ![initial landing page](./wireframes/landing_page.png)
+
 - Landing page will give some background on what the user will encounter within the project and will have a button to move to the first slide
 
+### Introduction Page
 ![introduction page](./wireframes/the_mix.png)
+
 - The opening page will introduce the concept of a "mix" and the mix visualization format
 - Will include the first two demos, which between them will show the effects of panning, volume, and full individual processing across all tracks
 - Sections will "enter" the page via animation as indicated by the numbered ovals
 - General nav at the bottom of the page will allow user to jump between sections
 
+### Processor demos
 ![individual processor demo](./wireframes/-processor-page-.png)
+
 - Slides for each processor type will include a visualization highlighting the element being used for this processor demo
 - Users can play/pause looped audio, toggling what they hear between a single track or the full song and between different levels of processing for that track
 - Processors are planned to include: EQ, compression, saturation/distortion, modulation, pitch shift, and spatial effects (reverb or delay) 
