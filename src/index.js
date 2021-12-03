@@ -1,11 +1,8 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 
-function component() {
-    const element = document.createElement('div');
-
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
-}
-
-document.body.appendChild(component());
+document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("The document has loaded");
+    // const element = document.createElement('div');
+    // element.innerHTML = "This is a test";
+    // document.body.append(element);
+});
