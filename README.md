@@ -70,10 +70,10 @@ This project will be implemented using:
 #### Friday
  
  - ~~Set up project structure/skeleton with webpack; test that it's working~~
- - Begin familiarization with the Web Audio API
- - Get a prototype button running that can play/pause audio
- - Get prototype button to loop audio
- - Get protoype button to live-swap audio from two sources
+ - ~~Begin familiarization with the Web Audio API~~
+ - ~~Get a prototype button running that can play/pause audio~~
+ - ~~Get prototype button to loop audio~~
+ - ~~Get protoype button to live-swap audio from two sources~~
 
 #### Saturday/Sunday
  
