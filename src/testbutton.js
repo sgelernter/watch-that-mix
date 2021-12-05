@@ -6,14 +6,16 @@ export const createButtons = function(){
     playButton.setAttribute('data-playing', false);
     playButton.setAttribute('role', 'switch');
 
-    const bOk = document.createElement('audio');
-    bOk.src = '../audio/B_Ok_master_final_44.1khz.wav';
-    bOk.setAttribute('loop', true);
-    
-    const bOkRaw = document.createElement('audio');
-    bOkRaw.src = '../audio/B_Ok_rawtracks.wav';
-    bOkRaw.setAttribute('loop', true);
-    bOkRaw.setAttribute('muted', true);
+    const createAudio = function(source) {
+        const el = new Audio(source);
+        el.setAttribute('loop', true);
+        el.setAttribute('muted', true);
+        el.setAttribute('paused', true);
+        return el;
+    }
+
+    const bOk = createAudio('./audio/B_Ok_master_final_44.1khz.wav');   
+    const bOkRaw = createAudio('./audio/B_Ok_rawtracks.wav');
 
     const audioCtx = new AudioContext();
     const track = audioCtx.createMediaElementSource(bOk);
