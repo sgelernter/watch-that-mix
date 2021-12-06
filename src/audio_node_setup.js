@@ -4,7 +4,6 @@ export const createAudioNode = function(title, source, muted = true){
     el.setAttribute('loop', true);
     el.setAttribute('paused', true);
     muted ? el.muted = true : el.muted = false;
-    // debugger
-    // console.log(el.muted);
+    
     return el;
 }

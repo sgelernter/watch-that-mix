@@ -13,6 +13,7 @@ button {
     background-color: lightgrey;
 }
 
+
 button.soloed {
     background-color: yellow;
 }
@@ -21,7 +22,26 @@ button.not-soloed {
     background-color: lightgrey;
 }
 
+button.selected {
+    background-color: rgb(142, 198, 236);
+}
+
 button#next {
     height: 20px;
     align-self: center;
+}
+
+div#nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    margin: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(253, 156, 205);
+    cursor: pointer;
 }

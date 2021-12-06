@@ -1,5 +1,6 @@
 export const sourceToggler = function(chosenNode, mainNodes, soloNodes, soloButton){
     const button = document.createElement('button');
+    button.className = 'not-selected';
     const pageNodes = mainNodes.concat(soloNodes);
     
     button.innerText = `${chosenNode.title}`;

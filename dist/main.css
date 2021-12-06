@@ -23,7 +23,26 @@ button.not-soloed {
   background-color: lightgrey;
 }
 
+button.selected {
+  background-color: #8ec6ec;
+}
+
 button#next {
   height: 20px;
   align-self: center;
+}
+
+div#nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li {
+  margin: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fd9ccd;
+  cursor: pointer;
 }

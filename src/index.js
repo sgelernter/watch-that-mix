@@ -32,6 +32,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
+
+    const nav = document.getElementById('nav');
+    nav.addEventListener("click", function(e){
+        i = pageList.indexOf(e.target.id);
+        currentPage.closeContext();
+        currentPage = setCurrentPage();
+    })
     // let currentPage = new EffectPage(audioContext, 'comp');
     // let newPage = new EffectPage(audioContext, 'eq');
 
