@@ -1,10 +1,10 @@
 
 export const createButtons = function(){
 
-    // const playButton = document.createElement('button');
-    // playButton.innerText = 'play/pause';
-    // playButton.setAttribute('data-playing', false);
-    // playButton.setAttribute('role', 'switch');
+    const playButton = document.createElement('button');
+    playButton.innerText = 'play/pause';
+    playButton.setAttribute('data-playing', false);
+    playButton.setAttribute('role', 'switch');
 
     const createAudio = function(source) {
         const el = new Audio(source);
