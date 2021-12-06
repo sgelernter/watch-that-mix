@@ -77,8 +77,8 @@ This project will be implemented using:
 
 #### Saturday/Sunday
  
- - Assemble necessary audio resources. These will be approximately 15-second clips, comprising 4 intro slide clips and 6 clips for each processor slide for an estimated 34-40 clips depending on processor categorization. These will need to be pulled from old pro tools sessions, and for variety some will need to be cleared for use with the artists.
- - Implement player/toggle buttons functionality
+ - Assemble necessary audio resources. These will be approximately 15-second clips, comprising 4 intro slide clips and 6 clips for each processor slide for an estimated 34-40 clips depending on processor categorization. These will need to be pulled from old pro tools sessions, ~~and for variety some will need to be cleared for use with the artists.~~ (PARTIALLY DONE)
+ - Implement ~~player~~/toggle buttons functionality
  - Begin familiarization with D3 API, determine steps needed to create and animate mix visualization displays
 
 #### Monday
