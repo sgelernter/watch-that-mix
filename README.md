@@ -84,7 +84,7 @@ This project will be implemented using:
 
  - Begin familiarization with D3 API, determine steps needed to create and animate mix visualization displays
  - Write in-page copy
- - Set up nav bar/"next" buttons w/ page change functionality
+ - Set up nav bar/~~"next" buttons w/ page change functionality~~
  - Begin CSS styling for site
 
 #### Tuesday
@@ -92,6 +92,7 @@ This project will be implemented using:
  - Have text and buttons displayed and arranged correctly
  - Create mix visualizers, add them to slides
  - Use D3 to add dynamic behavior to visualizers
+ - (Change source toggle buttons to radio elements?)
  - Determine which bonus features are doable within remaining time, if any
  
 

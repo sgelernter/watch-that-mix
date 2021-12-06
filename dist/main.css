@@ -6,6 +6,10 @@
   float: bottom;
 }
 
+body {
+  height: 600px;
+}
+
 button {
   display: block;
   background-color: lightgrey;
@@ -17,4 +21,9 @@ button.soloed {
 
 button.not-soloed {
   background-color: lightgrey;
+}
+
+button#next {
+  height: 20px;
+  align-self: center;
 }

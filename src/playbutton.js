@@ -5,8 +5,8 @@ export const playButton = function(audioContext, audioNodes){
     
     
     button.addEventListener("click", function(){
+        event.preventDefault();
         if (audioContext.state === "suspended") {audioContext.resume()};
-        // event.preventDefault();
         const that = this;
         // debugger
         audioNodes.forEach (function(node){

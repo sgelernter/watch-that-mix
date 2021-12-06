@@ -8,6 +8,7 @@ export const sourceToggler = function(chosenNode, mainNodes, soloNodes, soloButt
         pageNodes.forEach (function(node) {
             node.muted = true;
         });
+        // debugger
         if (soloButton.className === 'soloed') {
             soloNodes[mainNodes.indexOf(chosenNode)].muted = false;
         } else {
