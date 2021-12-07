@@ -21,7 +21,7 @@ export class EffectPage {
         const container = document.getElementById('page-contents');
         container.append(play);
         container.append(soloButton);
-        container.append(volume);
+        // container.append(volume);
         const that = this;
 
         volume.addEventListener ('input', function() {

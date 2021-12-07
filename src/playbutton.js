@@ -1,6 +1,7 @@
 export const playButton = function(audioContext, audioNodes){
     const button = document.createElement('button');
     button.innerText = 'Play/Pause Track';
+    button.id = 'play';
     button.className = 'not-selected';
     button.setAttribute('data-playing', false);
     

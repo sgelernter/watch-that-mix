@@ -82,10 +82,10 @@ This project will be implemented using:
 
 #### Monday
 
- - Begin familiarization with D3 API, determine steps needed to create and animate mix visualization displays
+ - ~~Begin familiarization with D3 API,~~ determine steps needed to create and animate mix visualization displays
  - Write in-page copy
  - Set up nav bar/~~"next" buttons w/ page change functionality~~
- - Begin CSS styling for site
+ - ~~Begin CSS styling for site~~
 
 #### Tuesday
 

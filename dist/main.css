@@ -10,9 +10,30 @@ body {
   height: 600px;
 }
 
+h1 {
+  display: block;
+  margin: auto;
+}
+
+div#chart-container {
+  height: 600px;
+  width: 500px;
+  border: solid black 1px;
+  float: left;
+  margin: 15px;
+  margin-right: 50px;
+  background: linear-gradient(145deg, #ffb3cc, #b6b9ff);
+  z-index: -1;
+}
+
 button {
   display: block;
   background-color: lightgrey;
+  margin: 5px;
+}
+
+button#play {
+  margin-top: 50px;
 }
 
 button.soloed {
@@ -35,6 +56,8 @@ button#next {
 div#nav ul {
   display: flex;
   flex-direction: row;
+  border: 1px solid black;
+  border-radius: 20%;
 }
 
 ul li {

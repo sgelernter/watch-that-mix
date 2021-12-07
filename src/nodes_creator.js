@@ -1,6 +1,6 @@
 import { createAudioNode } from "./audio_node_setup";
 
-const eq = function(context, gainNode) {
+const eq = function(context) {
     const rightFull = createAudioNode('Good EQ', './audio/EQ/Hanging_Around_fulltrack_finalGTReq.wav', false); 
     const rightSolo = createAudioNode('Good Solo', './audio/EQ/Hanging_Around_solo_finalGTReq.wav')
     const noFull = createAudioNode('No EQ', './audio/EQ/Hanging_Around_fulltrack_noGTReq.wav')
@@ -10,19 +10,19 @@ const eq = function(context, gainNode) {
     const fullNodes = [rightFull, noFull, overFull];
     const soloNodes = [rightSolo, noSolo, overSolo];
     const allNodes = fullNodes.concat(soloNodes);
-    const auxNode = new Audio(context);
+    // const auxNode = new Audio(context);
     // debugger
     allNodes.forEach (function(node) {
         // let i = 0;
-        (context.createMediaElementSource(node)).connect(auxNode).connect(context.destination);
+        context.createMediaElementSource(node).connect(context.destination);
         // i++;
     });
-    auxNode.connect(gainNode);
+    // auxNode.connect(gainNode);
     return [fullNodes, soloNodes, allNodes];
 }
 
 
-const comp = function(context, gainNode) {
+const comp = function(context) {
     const rightFull = createAudioNode('Good Compression', './audio/compression/Teacup_rightcompression_fulltrack.wav', false); 
     const rightSolo = createAudioNode('Good Solo', './audio/compression/Teacup_rightcompression_solo.wav')
     const noFull = createAudioNode('No Compression', './audio/compression/Teacup_nocomp_fulltrack.wav')
@@ -33,7 +33,7 @@ const comp = function(context, gainNode) {
     const soloNodes = [rightSolo, noSolo, overSolo];
     const allNodes = fullNodes.concat(soloNodes);
     allNodes.forEach (function(node) {
-        (context.createMediaElementSource(node)).connect(gainNode).connect(context.destination);
+        context.createMediaElementSource(node).connect(context.destination);
     });
     return [fullNodes, soloNodes, allNodes];
 }
