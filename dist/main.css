@@ -8,7 +8,7 @@
 
 body {
   height: 600px;
-  background-color: honeydew;
+  background-color: #fbfdfb;
 }
 
 p {
@@ -20,9 +20,10 @@ h1 {
   margin: auto;
 }
 
-div#chart-container {
+svg#chart-container {
   height: 600px;
   width: 500px;
+  position: relative;
   border: solid black 1px;
   float: left;
   margin: 15px;
@@ -42,7 +43,7 @@ button#play {
 }
 
 button.soloed {
-  background-color: yellow;
+  background-color: #fffc50;
 }
 
 button.not-soloed {
@@ -51,6 +52,7 @@ button.not-soloed {
 
 button.selected {
   background-color: #8ec6ec;
+  box-shadow: inset 1px 1px 1px #363636;
 }
 
 button#next {
@@ -73,4 +75,30 @@ ul li {
 button:hover {
   background-color: #fd9ccd;
   cursor: pointer;
+  box-shadow: grey 0px 2px 5px 2px;
+  transition: box-shadow 0.1s;
+}
+
+.shape {
+  fill-opacity: 100%;
+  transition: fill 0.5s, fill-opacity 0.5s;
+}
+
+.shape-dimmed {
+  fill: grey;
+  fill-opacity: 30%;
+  transition: fill 2s, fill-opacity 0.3s;
+}
+
+.highlighted#FEATURED {
+  fill: gold;
+  box-shadow: #615824 20px 20px 20px 20px;
+  position: relative;
+  z-index: 5;
+  transition: fill 1s;
+}
+
+.not-highlighted {
+  fill: blue;
+  transition: fill 0.5s;
 }

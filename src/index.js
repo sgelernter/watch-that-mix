@@ -2,7 +2,6 @@
 import { _ } from 'core-js';
 import { EffectPage } from './effect_page.js';
 import * as imports from './imports.js';
-// import {createButtons} from './testbutton.js';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -41,8 +40,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
     const chartContainer = document.getElementById('chart-container');
-    chartContainer.append(imports.graph());
+    const shapes = imports.graph();
+    shapes.forEach ((shape) => {
+        chartContainer.append(shape);
+        shape.setAttribute('class', 'shape');
+    });
+    
+    const update = function(){
+        d3.selectAll('.shape')
+            .transition()
+            .duration(2000)
+            .style('opacity', '100%');
+    }
+    update();
+    
 });
+
+
+// const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+// circle.setAttribute('cx', '50%');
+// circle.setAttribute('cy', '50%');
+// circle.setAttribute('r', '50');
+// circle.setAttribute('fill', 'blue');
+// circle.setAttribute('id', 'dynamic-circle');
+// chartContainer.append(circle);
 // let currentPage = new EffectPage(audioContext, 'comp');
 // let newPage = new EffectPage(audioContext, 'eq');
 

@@ -16,11 +16,20 @@ export class SoloToggle {
                 solo.muted = true;
                 that.fullNodes[soloIdx].muted = false;
                 that.button.className = 'not-soloed';
+                d3.selectAll('.shape-dimmed')
+                    .attr('class', 'shape');
+                d3.select('#FEATURED')
+                    .attr('class', 'not-highlighted');
             } else {
                 const fullIdx = fullNodes.indexOf(full);
                 full.muted = true;
                 that.soloNodes[fullIdx].muted = false;
                 that.button.className = 'soloed';
+                // debugger
+                d3.selectAll('.shape')
+                    .attr('class', 'shape-dimmed');
+                d3.select('#FEATURED')
+                    .attr('class', 'highlighted');
             }
         })
         return this.button;
@@ -34,5 +43,6 @@ export class SoloToggle {
             })
             return currentNode;
         }
+    
 }
 
