@@ -14,11 +14,12 @@ export class EffectPage {
         this.fullNodes = this.nodeSet[0];
         this.soloNodes = this.nodeSet[1];
         this.allNodes = this.nodeSet[2];
-        // debugger
+
         const play = playButton(this.context, this.allNodes);
         const soloButton = new SoloToggle(this.fullNodes, this.soloNodes);
         const volume = this.createVolumeSlider();
         const container = document.getElementById('page-contents');
+        container.append(this.correctText());
         container.append(play);
         container.append(soloButton);
         // container.append(volume);
@@ -41,6 +42,14 @@ export class EffectPage {
             case 'eq': return audio.eq(this.context, this.gainNode);
             case 'comp': return audio.comp(this.context, this.gainNode);
         }
+    }
+
+    correctText(){
+        const explainer = document.createElement('p');
+        switch (this.pagename) {
+            case 'eq': explainer.innerHTML = 'A short paragraph with an explanation of the effect goes here once I write it and figure out the most efficient way to populate it to the page.';
+        }
+        return explainer;
     }
 
     createVolumeSlider(){
