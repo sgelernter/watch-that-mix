@@ -11,11 +11,8 @@ const eq = function(context) {
     const soloNodes = [rightSolo, noSolo, overSolo];
     const allNodes = fullNodes.concat(soloNodes);
     // const auxNode = new Audio(context);
-    // debugger
     allNodes.forEach (function(node) {
-        // let i = 0;
         context.createMediaElementSource(node).connect(context.destination);
-        // i++;
     });
     // auxNode.connect(gainNode);
     return [fullNodes, soloNodes, allNodes];
@@ -37,11 +34,44 @@ const comp = function(context) {
     });
     return [fullNodes, soloNodes, allNodes];
 }
-// './audio/compression/Teacup_rightcompression_fulltrack.wav',
-// './audio/compression/Teacup_nocomp_fulltrack.wav',
-// './audio/compression/Teacup_overcompress_fulltrack.wav',
-// './audio/compression/Teacup_nocomp_solo.wav',
-// './audio/compression/Teacup_rightcompression_solo.wav',
-// './audio/compression/Teacup_overcompress_solo.wav'
 
-export { eq, comp }
+const saturate = function(context) {
+    const rightFull = createAudioNode('Good Saturation', './audio/saturation_and_distortion/EnyaIV_goodSaturation_fulltrack.wav', false); 
+    const rightSolo = createAudioNode('Good Solo', './audio/saturation_and_distortion/EnyaIV_goodSaturation_solo.wav')
+    const noFull = createAudioNode('No Saturation', './audio/saturation_and_distortion/EnyaIV_noSaturation_fulltrack.wav')
+    const noSolo = createAudioNode('No Solo', './audio/saturation_and_distortion/EnyaIV_noSaturation_solo.wav')
+    const overFull = createAudioNode('Too Much Saturation', './audio/saturation_and_distortion/EnyaIV_OVERSaturation_fulltrack.wav')
+    const overSolo = createAudioNode('Too Much Solo', './audio/saturation_and_distortion/EnyaIV_OVERSaturation_solo.wav')
+    const fullNodes = [rightFull, noFull, overFull];
+    const soloNodes = [rightSolo, noSolo, overSolo];
+    const allNodes = fullNodes.concat(soloNodes);
+    allNodes.forEach (function(node) {
+        context.createMediaElementSource(node).connect(context.destination);
+    });
+    return [fullNodes, soloNodes, allNodes];
+}
+
+const spatial = function(context) {
+    const rightFull = createAudioNode('Good Spatial FX', './audio/spatial_effects/Sweatshirt_goodspatialFX_fulltrack.wav', false); 
+    const rightSolo = createAudioNode('Good Solo', './audio/spatial_effects/Sweatshirt_goodspatialFX_solo.wav')
+    const noFull = createAudioNode('No FX', './audio/spatial_effects/Sweatshirt_NOspatialFX_fulltrack.wav')
+    const noSolo = createAudioNode('No Solo', './audio/spatial_effects/Sweatshirt_NOspatialFX_solo.wav')
+    const overFull = createAudioNode('Too Much Space', './audio/spatial_effects/Sweatshirt_XTspatialFX_fulltrack.wav')
+    const overSolo = createAudioNode('Too Much Solo', './audio/spatial_effects/Sweatshirt_XTspatialFX_solo.wav')
+    const fullNodes = [rightFull, noFull, overFull];
+    const soloNodes = [rightSolo, noSolo, overSolo];
+    const allNodes = fullNodes.concat(soloNodes);
+    allNodes.forEach (function(node) {
+        context.createMediaElementSource(node).connect(context.destination);
+    });
+    return [fullNodes, soloNodes, allNodes];
+}
+
+const fullMix = function(context) {
+    const fullMix = createAudioNode('Full Mix', './audio/full_mix/B_Ok_fullmix.wav'); 
+    const rawTracks = createAudioNode('Raw Tracks', './audio/full_mix/B_Ok_rawtracks.wav')
+    return [fullMix, rawTracks];
+}
+
+
+export { eq, comp, saturate, spatial, fullMix }

@@ -18,8 +18,10 @@ export class EffectPage {
         const play = playButton(this.context, this.allNodes);
         const soloButton = new SoloToggle(this.fullNodes, this.soloNodes);
         const volume = this.createVolumeSlider();
+        const pageText = document.createElement('p');
+        pageText.innerText = this.correctText();
         const container = document.getElementById('page-contents');
-        container.append(this.correctText());
+        container.append(pageText);
         container.append(play);
         container.append(soloButton);
         // container.append(volume);
@@ -40,7 +42,9 @@ export class EffectPage {
     correctNodes(){
         switch (this.pagename) {
             case 'eq': return audio.eq(this.context, this.gainNode);
-            case 'comp': return audio.comp(this.context, this.gainNode);
+            case 'comp': return audio.comp(this.context, this.gainNode);                   
+            case 'saturate': return audio.saturate(this.context, this.gainNode);                   
+            case 'spatial': return audio.spatial(this.context, this.gainNode);                   
         }
     }
 

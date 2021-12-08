@@ -6,7 +6,7 @@ import * as imports from './imports.js';
 
 document.addEventListener("DOMContentLoaded", (event) => {
     // let audioContext = new AudioContext();
-    const pageList = ['eq', 'comp'];
+    const pageList = ['eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
     const setCurrentPage = function(){
         const prevPage = document.getElementById('page-contents');
