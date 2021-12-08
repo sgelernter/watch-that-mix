@@ -1,13 +1,14 @@
 // import _ from 'lodash';
 import { _ } from 'core-js';
-import './reset.css';
+import { IntroPage } from './intro_page.js';
 import { EffectPage } from './effect_page.js';
 import * as imports from './imports.js';
+import './reset.css';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
     // let audioContext = new AudioContext();
-    const pageList = ['eq', 'comp', 'saturate', 'spatial'];
+    const pageList = ['fullmix', 'eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('previous');
@@ -34,7 +35,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const prevContents = Array.from(prevPage.children);
         prevContents.forEach (function(el) {prevPage.removeChild(el)});
         updateButtons();
-        return new EffectPage(pageList[i]);
+        if (i === 0) {
+            return new IntroPage();
+        } else {
+            return new EffectPage(pageList[i]);
+        }
     }
 
     let currentPage = setCurrentPage();

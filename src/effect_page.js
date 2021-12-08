@@ -18,10 +18,10 @@ export class EffectPage {
         const play = playButton(this.context, this.allNodes);
         const soloButton = new SoloToggle(this.fullNodes, this.soloNodes);
         const volume = this.createVolumeSlider();
-        const pageText = document.createElement('p');
-        pageText.innerText = this.correctText();
+        // const pageText = document.createElement('p');
+        // pageText.innerText = this.correctText();
         const container = document.getElementById('page-contents');
-        container.append(pageText);
+        container.append(this.correctText());
         container.append(play);
         container.append(soloButton);
         // container.append(volume);

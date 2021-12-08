@@ -68,8 +68,10 @@ const spatial = function(context) {
 }
 
 const fullMix = function(context) {
-    const fullMix = createAudioNode('Full Mix', './audio/full_mix/B_Ok_fullmix.wav'); 
-    const rawTracks = createAudioNode('Raw Tracks', './audio/full_mix/B_Ok_rawtracks.wav')
+    const fullMix = createAudioNode('Full Mix', './audio/full_mix/B_Ok_master_final_44.1khz.wav', false); 
+    const rawTracks = createAudioNode('Raw Tracks', './audio/full_mix/B_Ok_rawtracks.wav');
+    context.createMediaElementSource(fullMix).connect(context.destination);
+    context.createMediaElementSource(rawTracks).connect(context.destination);
     return [fullMix, rawTracks];
 }
 
