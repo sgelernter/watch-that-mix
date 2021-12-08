@@ -30,6 +30,10 @@ svg#chart-container {
     z-index: -1;
 }
 
+svg > * {
+    transition: visibility 2s;
+}
+
 button {
     display: block;
     background-color: lightgrey;
@@ -79,9 +83,9 @@ button:hover {
 }
 
 .shape {
-    fill-opacity: 100%;
+    fill-opacity: 95%;
     backdrop-filter: blur(20px);
-    transition: fill .5s, fill-opacity .5s;
+    transition: fill .5s, fill-opacity .5s, opacity 1.5s;
 }
 
 .shape:hover {

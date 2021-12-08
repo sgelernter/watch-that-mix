@@ -1,3 +1,4 @@
+const allShapes = []
 
 const fullMixChart = function() {
     
@@ -113,7 +114,7 @@ const fullMixChart = function() {
         shape.setAttribute('class', 'shape');
         shapes.push(shape);  
     });
-    return shapes;
+    allShapes.push(shapes);
 }
 
 const eqChart = function() {
@@ -132,6 +133,10 @@ const spaceChart = function() {
 
 }
 
-const allShapes = [fullMixChart()]
+fullMixChart();
+eqChart();
+compChart();
+saturateChart();
+spaceChart();
 
-export { allShapes, fullMixChart, eqChart, compChart, saturateChart, spaceChart };
+export const ALLSHAPES = allShapes;

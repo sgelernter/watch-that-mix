@@ -1,41 +1,50 @@
-import * as charts from './all_shapes';
+import {ALLSHAPES} from "./all_shapes";
+
+const allCharts = ALLSHAPES;
+const mixShapes = allCharts[0];
+const eqShapes = allCharts[1];
+const compShapes = allCharts[2];
+const satShapes = allCharts[3];
+const spaceShapes = allCharts[4];
 
 const createCharts = function (){
     const chartContainer = document.getElementById('chart-container');
-    const shapes = charts.allShapes[0];
-    shapes.forEach ((shape) => {
-        chartContainer.append(shape);
+    allCharts.forEach ((chart) => {
+        chart.forEach ((shape) => {
+            chartContainer.append(shape);
+        });
+        hideShapes(chart);
     });
-    hideShapes(shapes);
 }
 
 const revealShapes = function(shapes){
+    allCharts.forEach ((chart) => {hideShapes(chart)});
     shapes.forEach ((shape) => {
-        shape.setAttribute('visibility', 'visible');
+        shape.setAttribute('opacity', '85%');
     })
 }
 
 const hideShapes = function(shapes){
     shapes.forEach ((shape) => {
-        shape.setAttribute('visiblity', 'hidden');
+        shape.setAttribute('opacity', '0%');
     })
 }
 const revealChart = function(pagename) {
     switch (pagename) {
         case 'fullmix': 
-            revealShapes(charts.fullMixChart());
+            revealShapes(mixShapes);
             break;
         case 'eq': 
-            revealShapes(charts.eqChart());
+            revealShapes(eqShapes);
             break;
         case 'comp': 
-            revealShapes(charts.compChart());
+            revealShapes(compShapes);
             break;
         case 'saturate': 
-            revealShapes(charts.saturateChart());
+            revealShapes(satShapes);
             break;
         case 'spatial': 
-            revealShapes(charts.spaceChart());
+            revealShapes(spaceShapes);
             break;
     }
 }
