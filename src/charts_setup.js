@@ -18,9 +18,14 @@ const createCharts = function (){
 }
 
 const revealShapes = function(shapes){
+    const keyBox = document.getElementById('chart-key');
     allCharts.forEach ((chart) => {hideShapes(chart)});
     shapes.forEach ((shape) => {
         shape.setAttribute('opacity', '85%');
+        shape.addEventListener('mouseover', (e) => {
+            keyBox.innerHTML = `This shape represents the: ${shape.getAttribute('name')}`;
+        })
+        shape.addEventListener('mouseleave', (e) => keyBox.innerHTML = "");
     })
 }
 

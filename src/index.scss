@@ -27,7 +27,7 @@ svg#chart-container {
     margin: 15px;
     margin-right: 50px;
     background: linear-gradient(145deg, #ffb3cc, #b6b9ff);
-    z-index: -1;
+    // z-index: 1;
 }
 
 svg > * {
@@ -94,6 +94,7 @@ button:hover {
     stroke-opacity: 60%;
     filter: blur(.5px);
 }
+
 .shape-dimmed {
     fill: grey;
     fill-opacity: 30%;
