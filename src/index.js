@@ -8,22 +8,43 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // let audioContext = new AudioContext();
     const pageList = ['eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('previous');
+    const updateButtons = function(){
+        switch (i) {
+            case 0: 
+                // debugger
+                prevButton.className = 'invisible';
+                nextButton.className = 'visible';
+                break;
+            case (pageList.length - 1):
+                nextButton.className = 'invisible';
+                prevButton.className = 'visible';
+                break;
+            default:
+                // debugger
+                nextButton.className = 'visible';
+                prevButton.className = 'visible';
+        }
+    }
+    
     const setCurrentPage = function(){
         const prevPage = document.getElementById('page-contents');
         const prevContents = Array.from(prevPage.children);
         prevContents.forEach (function(el) {prevPage.removeChild(el)});
+        updateButtons();
         return new EffectPage(pageList[i]);
     }
+
     let currentPage = setCurrentPage();
-    // debugger
-    const nextButton = document.getElementById('next');
+    
     nextButton.addEventListener("click", function(){
         // debugger
         i++;
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
-    const prevButton = document.getElementById('previous');
+
     prevButton.addEventListener("click", function(){
         // debugger
         console.log('where is the debugger');
@@ -31,7 +52,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
-
+    
+        
+    
     const nav = document.getElementById('nav');
     nav.addEventListener("click", function(e){
         i = pageList.indexOf(e.target.id);
