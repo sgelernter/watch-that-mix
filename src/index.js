@@ -4,6 +4,7 @@ import { IntroPage } from './intro_page.js';
 import { EffectPage } from './effect_page.js';
 import * as imports from './imports.js';
 import './reset.css';
+import { revealChart } from './charts_setup.js';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let i = 0;
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('previous');
+    imports.createCharts();
+
     const updateButtons = function(){
         switch (i) {
             case 0: 
@@ -36,8 +39,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         prevContents.forEach (function(el) {prevPage.removeChild(el)});
         updateButtons();
         if (i === 0) {
+            revealChart('fullmix');
             return new IntroPage();
         } else {
+            revealChart(pageList[i]);
             return new EffectPage(pageList[i]);
         }
     }
@@ -67,20 +72,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
-
-    const chartContainer = document.getElementById('chart-container');
-    const shapes = imports.graph();
-    shapes.forEach ((shape) => {
-        chartContainer.append(shape);
-        shape.setAttribute('class', 'shape');
-    });
     
-    const update = function(){
-        d3.selectAll('.shape')
-            .transition()
-            .duration(2000)
-            .style('opacity', '100%');
-    }
-    update();
+    // const update = function(){
+    //     d3.selectAll('.shape')
+    //         .transition()
+    //         .duration(2000)
+    //         .style('opacity', '100%');
+    // }
+    // update();
     
 });

@@ -80,9 +80,16 @@ button:hover {
 
 .shape {
     fill-opacity: 100%;
+    backdrop-filter: blur(20px);
     transition: fill .5s, fill-opacity .5s;
 }
 
+.shape:hover {
+    stroke:rgb(255, 255, 255);
+    stroke-width: 2px;
+    stroke-opacity: 60%;
+    filter: blur(.5px);
+}
 .shape-dimmed {
     fill: grey;
     fill-opacity: 30%;
