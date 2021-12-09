@@ -5,6 +5,7 @@ import { SoloToggle } from './solo_button';
 import { sourceToggler } from './sourcetogglebutton';
 
 export class IntroPage {
+    
     constructor() {
         this.context = new AudioContext();
         this.nodeSet = audio.fullMix(this.context);
