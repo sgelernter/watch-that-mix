@@ -10,7 +10,7 @@ into a finished, radio-ready track.
 ![basic effect page](./readme_images/basic_page.JPG)
 
 By providing an engaging, responsive interface to experiment with effects of various types of processing 
-in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
+in-context and in real time, [this project](https://sgelernter.github.io/watch-that-mix/) will allow users to develop some hands-on knowledge of the 
 music-making process that will hopefully enhance their understanding and appreciation for all the work that 
 goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint. 
 
@@ -67,7 +67,38 @@ This project will be implemented using:
 - Webpack to bundle JS code
 - Babel to transpile JS code
 - npm to manage dependencies
-- D3 (Data-Driven Documents) API to enable dynamic mix visualizations 
+- [D3](https://d3js.org/) API to enable dynamic mix visualizations
+- Inkscape to generate SVG shapes 
+
+## Code Highlights
+
+The idea of generating all of the shapes required to make interactive mix charts seemed daunting until I found a program ([Inkscape](https://inkscape.org/)) that allows for creation of shapes in a GUI and export a set of HTML objects. That still left the task of creating and formatting dozens of individual shapes of different types within my project. This was the method I wrote to solve that problem, which takes in a POJO with data for a group of unknown types of objects and returns a usable array filled with java-ready SVG shapes:
+```javascript
+
+const createShapes = function(shapesArr){
+   const shapes = [];
+   shapesArr.forEach ((shapeObj) => {
+      const shape = document.createElementNS('http://www.w3.org/2000/svg', shapeObj.type);
+      if (shapeObj.name) {shape.setAttribute('name', shapeObj.name)};
+      if (shapeObj.cx) {shape.setAttribute('cx', shapeObj.cx)};
+      if (shapeObj.cy) {shape.setAttribute('cy', shapeObj.cy)};
+      if (shapeObj.rx) {shape.setAttribute('rx', shapeObj.rx)};
+      if (shapeObj.ry) {shape.setAttribute('ry', shapeObj.ry)};
+      if (shapeObj.width) {shape.setAttribute('width', shapeObj.width)};
+      if (shapeObj.height) {shape.setAttribute('height', shapeObj.height)};
+      if (shapeObj.x) {shape.setAttribute('x', shapeObj.x)};
+      if (shapeObj.y) {shape.setAttribute('y', shapeObj.y)};
+      if (shapeObj.transform) {shape.setAttribute('transform', shapeObj.transform)};
+      if (shapeObj.fill) {shape.setAttribute('fill', shapeObj.fill)}
+      shape.setAttribute ('opacity', '80%');
+      shapeObj.class ? shape.setAttribute('class', 'shape-featured') : shape.setAttribute('class', 'shape'); 
+      shapes.push(shape);  
+   });
+   allShapes.push(shapes);
+}
+
+```
+
 
 ## Implementation Timeline
 
