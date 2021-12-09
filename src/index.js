@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let i = 0;
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('previous');
-    imports.createCharts();
+    const chartContainer = document.getElementById('chart-container');
+    imports.createCharts(chartContainer);
 
     const updateButtons = function(){
         switch (i) {
@@ -39,10 +40,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         prevContents.forEach (function(el) {prevPage.removeChild(el)});
         updateButtons();
         if (i === 0) {
-            revealChart('fullmix');
+            revealChart('fullmix', chartContainer);
             return new IntroPage();
         } else {
-            revealChart(pageList[i]);
+            revealChart(pageList[i], chartContainer);
             return new EffectPage(pageList[i]);
         }
     }
