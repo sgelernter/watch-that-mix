@@ -99,6 +99,82 @@ const createShapes = function(shapesArr){
 
 ```
 
+In order to create the illusion of live-swapping different processing states on a single sound, each effect page actually draws from a set of audio nodes running concurrently. To make the solo buttons work they had to 1) see all the avalable nodes, 2) query for the currently-playing node, 3) swap what's currently-playing the correct corresponding full track/solo sound, and 4) handle the animation triggers for the charts:
+
+```javascript
+
+export class SoloToggle {
+    constructor(fullNodes, soloNodes){
+
+        this.fullNodes = fullNodes;
+        this.soloNodes = soloNodes;
+        this.button = document.createElement('button');
+        this.button.innerText = 'S';
+        this.button.id = 'solo-button';
+        this.button.className = 'not-soloed';
+
+        const that = this;
+
+        this.button.addEventListener("click", function(){
+
+            let solo = that.getCurrentNode(soloNodes);
+            let full = that.getCurrentNode(fullNodes);
+            if (solo) {
+                const soloIdx = soloNodes.indexOf(solo);
+                solo.muted = true;
+                that.fullNodes[soloIdx].muted = false;
+                that.button.className = 'not-soloed';
+                d3.selectAll('.shape-dimmed')
+                    .attr('class', 'shape');
+                d3.selectAll('.shape-featured-highlighted')
+                    .attr('class', 'shape-featured');
+            } else {
+                const fullIdx = fullNodes.indexOf(full);
+                full.muted = true;
+                that.soloNodes[fullIdx].muted = false;
+                that.button.className = 'soloed';
+                d3.selectAll('.shape')
+                    .attr('class', 'shape-dimmed');
+                d3.selectAll('.shape-featured')
+                    .attr('class', 'shape-featured-highlighted');
+            }
+        })
+        return this.button;
+    }
+
+    getCurrentNode(nodesArr) {
+        let currentNode;
+        nodesArr.forEach (function(node) {
+            if (node.muted === false) {
+                currentNode = node;
+            }
+            })
+            return currentNode;
+        }
+    
+}
+
+```
+Updating the DOM to contain the correct text, buttons, and set of active chart elements was one of the trickier tasks in this thing. Most of that work is handled within this one function that wipes the previous content, reveals the appropriate chart, then finally returns newly-created page content (re-making the page elements prevents the audio nodes from one page from playing accidentally while interacting with a different page and resets the sound clips to the beginning on setup):
+
+```javascript
+
+    const setCurrentPage = function(){
+        const prevPage = document.getElementById('page-contents');
+        const prevContents = Array.from(prevPage.children);
+        prevContents.forEach (function(el) {prevPage.removeChild(el)});
+        updateButtons();
+        if (i === 0) {
+            revealChart('fullmix', chartContainer);
+            return new IntroPage();
+        } else {
+            revealChart(pageList[i], chartContainer);
+            return new EffectPage(pageList[i]);
+        }
+    }
+
+```
+
 
 ## Implementation Timeline
 

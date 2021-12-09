@@ -7,7 +7,9 @@ export class SoloToggle {
         this.button.innerText = 'S';
         this.button.id = 'solo-button';
         this.button.className = 'not-soloed';
+        
         const that = this;
+
         this.button.addEventListener("click", function(){
 
             let solo = that.getCurrentNode(soloNodes);
