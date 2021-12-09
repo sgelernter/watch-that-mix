@@ -5,12 +5,10 @@ import { sourceToggler } from './sourcetogglebutton';
 
 export class EffectPage {
     constructor(pagename) {
-        // document.open();
         this.context = new AudioContext();
         this.gainNode = this.context.createGain();
         this.pagename = pagename;
         this.nodeSet = this.correctNodes();
-        // debugger
         this.fullNodes = this.nodeSet[0];
         this.soloNodes = this.nodeSet[1];
         this.allNodes = this.nodeSet[2];
@@ -18,20 +16,15 @@ export class EffectPage {
         const play = playButton(this.context, this.allNodes);
         const soloButton = new SoloToggle(this.fullNodes, this.soloNodes);
         const volume = this.createVolumeSlider();
-        // const pageText = document.createElement('p');
-        // pageText.innerText = this.correctText();
         const container = document.getElementById('page-contents');
         container.append(this.title());
         container.append(this.correctText());
         container.append(play);
         container.append(soloButton);
-        // container.append(volume);
         const that = this;
 
         volume.addEventListener ('input', function() {
-            // debugger
             that.gainNode.value = this.value;
-            console.log(this.value);
         });
 
         this.fullNodes.forEach (function(node) {
@@ -105,6 +98,8 @@ export class EffectPage {
         return titleText;
     }
 
+    // This is the start of one of the functionalities I didn't end up with time to implement--a volume control slider for each sound in the page (not deleted because 
+    // some of its code is currently tied into the process of creating an effects page):
     createVolumeSlider(){
         const volControl = document.createElement('input');
         volControl.type = 'range';
@@ -114,7 +109,7 @@ export class EffectPage {
         volControl.value = 1;
         volControl.step = .01;
         return volControl;
-    }
+    } 
 
     closeContext(){
         this.context.close();

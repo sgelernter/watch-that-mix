@@ -32,7 +32,6 @@ export class IntroPage {
 
     correctText(){
         const explainer = document.createElement('p');
-        const mix = 'the mix'.italics();
         explainer.innerHTML = `On a broad scale, the process of mixing just means taking the raw recorded tracks of each element in a song's arrangement and blending them together in such a way that they 'feel' right (quotes there mostly because music production is as 
         subjective as anything else creative, and ultimately the only correct mix decision is one that sounds good to the producer!). On the following pages, we'll go into a few of the tools a mix engineer 
         might use to get everything sitting right before sending a track off to mastering (which is an entirely different JS demo). Each page comes with a demo clip

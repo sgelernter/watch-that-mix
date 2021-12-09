@@ -10,11 +10,9 @@ const eq = function(context) {
     const fullNodes = [rightFull, noFull, overFull];
     const soloNodes = [rightSolo, noSolo, overSolo];
     const allNodes = fullNodes.concat(soloNodes);
-    // const auxNode = new Audio(context);
     allNodes.forEach (function(node) {
         context.createMediaElementSource(node).connect(context.destination);
     });
-    // auxNode.connect(gainNode);
     return [fullNodes, soloNodes, allNodes];
 }
 

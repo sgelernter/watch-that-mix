@@ -8,6 +8,7 @@ import { revealChart } from './charts_setup.js';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
+    
     const pageList = ['fullmix', 'eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
     const nextButton = document.getElementById('next');
@@ -63,8 +64,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
-    
-        
     
     const nav = document.getElementById('nav');
     nav.addEventListener("click", function(e){

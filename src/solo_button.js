@@ -1,5 +1,6 @@
 export class SoloToggle {
     constructor(fullNodes, soloNodes){
+
         this.fullNodes = fullNodes;
         this.soloNodes = soloNodes;
         this.button = document.createElement('button');
@@ -25,7 +26,6 @@ export class SoloToggle {
                 full.muted = true;
                 that.soloNodes[fullIdx].muted = false;
                 that.button.className = 'soloed';
-                // debugger
                 d3.selectAll('.shape')
                     .attr('class', 'shape-dimmed');
                 d3.selectAll('.shape-featured')
