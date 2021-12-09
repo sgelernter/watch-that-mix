@@ -1,16 +1,16 @@
-## Background
+## About
 
-    Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
-    The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
-    music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
-    and a delay in the context of music production. The goal of this project is to teach anyone interested in 
-    the process of how music gets made about some of the tools producers use when turning raw recorded performance 
-    into a finished, radio-ready track. 
+Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
+The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
+music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
+and a delay in the context of music production. The goal of this project is to teach anyone interested in 
+the process of how music gets made about some of the tools producers use when turning raw recorded performance 
+into a finished, radio-ready track. 
     
-    By providing an engaging, responsive interface to experiment with effects of various types of processing 
-    in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
-    music-making process that will hopefully enhance their understanding and appreciation for all the work that 
-    goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint.    
+By providing an engaging, responsive interface to experiment with effects of various types of processing 
+in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
+music-making process that will hopefully enhance their understanding and appreciation for all the work that 
+goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint.    
 
 
 ## Functionality & MVPs

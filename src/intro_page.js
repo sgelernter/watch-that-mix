@@ -37,7 +37,8 @@ export class IntroPage {
         might use to get everything sitting right before sending a track off to mastering (which is an entirely different JS demo). Each page comes with a demo clip
         that can be played and paused, along with a few before/after options for you to get an idea of what these tools actually sound like. The diagrams on the left are 
         interactive representations of the mixes you'll be listening to, with each shape standing in for a different part of the arrangement. The y-axis represents frequency,
-        the x-axis represents panning in the stereo field, and depth represents elements that feel closer or farther from the listener.`;
+        the x-axis represents panning in the stereo field, and depth represents elements that feel closer or farther from the listener. The colors don't mean anything, but they are fun. Mouse
+        over a shape to see what sound it corresponds to!`;
         return explainer;
     }
 
