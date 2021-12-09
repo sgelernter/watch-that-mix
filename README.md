@@ -63,16 +63,16 @@ In addition, this project will include:
 
 This project will be implemented using:
 
-- The Web Audio API to load and control audio elements and playback
-- Webpack to bundle JS code
-- Babel to transpile JS code
-- npm to manage dependencies
+- The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to load and control audio elements and playback
+- [Webpack](https://webpack.js.org/) to bundle JS code
+- [Babel](https://babeljs.io/) to transpile JS code
+- [npm](https://www.npmjs.com/) to manage dependencies
 - [D3](https://d3js.org/) API to enable dynamic mix visualizations
-- Inkscape to generate SVG shapes 
+- [Inkscape](https://inkscape.org/) to generate SVG shapes 
 
 ## Code Highlights
 
-The idea of generating all of the shapes required to make interactive mix charts seemed daunting until I found a program ([Inkscape](https://inkscape.org/)) that allows for creation of shapes in a GUI and export a set of HTML objects. That still left the task of creating and formatting dozens of individual shapes of different types within my project. This was the method I wrote to solve that problem, which takes in a POJO with data for a group of unknown types of objects and returns a usable array filled with java-ready SVG shapes:
+The idea of generating all of the shapes required to make interactive mix charts seemed daunting until I found a program (Inkscape) that allows for creation of shapes in a GUI and export a set of HTML objects. That still left the task of creating and formatting dozens of individual shapes of different types within my project. This was the method I wrote to solve that problem, which takes in a POJO with data for a group of unknown types of objects and returns a usable array filled with java-ready SVG shapes:
 ```javascript
 
 const createShapes = function(shapesArr){
@@ -194,7 +194,7 @@ Updating the DOM to contain the correct text, buttons, and set of active chart e
 #### Monday
 
  - ~~Begin familiarization with D3 API, determine steps needed to create and animate mix visualization displays~~
- - Set up nav bar/~~"next" buttons w/ page change functionality~~
+ - ~~Set up nav bar/"next" buttons w/ page change functionality~~
  - ~~Begin CSS styling for site~~
 
 #### Tuesday
@@ -217,8 +217,8 @@ Updating the DOM to contain the correct text, buttons, and set of active chart e
 
 #### Thursday
 
- - Spellcheck
- - Update documentation
+ - ~~~Spellcheck~~
+ - ~~Update documentation~~
 
 ## Bonus Features
 
