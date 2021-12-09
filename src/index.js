@@ -8,7 +8,7 @@ import { revealChart } from './charts_setup.js';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    
+
     const pageList = ['fullmix', 'eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
     const nextButton = document.getElementById('next');
@@ -67,9 +67,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
     const nav = document.getElementById('nav');
     nav.addEventListener("click", function(e){
-        i = pageList.indexOf(e.target.id);
-        currentPage.closeContext();
-        currentPage = setCurrentPage();
+        if (e.target.getAttribute('class') === 'navlink') {
+            i = pageList.indexOf(e.target.id);
+            currentPage.closeContext();
+            currentPage = setCurrentPage();
+        }
     })
     
 });

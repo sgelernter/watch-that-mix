@@ -34,13 +34,13 @@ In addition, this project will include:
 
 ###             Initial Landing Page:
 
-![initial landing page](./wireframes/landing_page.png)
+![initial landing page](./readme_images/landing_page.png)
 
 - Landing page will give some background on what the user will encounter within the project and will have a button to move to the first slide
 
 ###             Introduction Page:
 
-![introduction page](./wireframes/the_mix.png)
+![introduction page](./readme_images/the_mix.png)
 
 - The opening page will introduce the concept of a "mix" and the mix visualization format
 - Will include the first two demos, which between them will show the effects of panning, volume, and full individual processing across all tracks
@@ -49,7 +49,7 @@ In addition, this project will include:
 
 ###             Processor demos:
 
-![individual processor demo](./wireframes/-processor-page-.png)
+![individual processor demo](./readme_images/-processor-page-.png)
 
 - Slides for each processor type will include a visualization highlighting the element being used for this processor demo
 - Users can play/pause looped audio, toggling what they hear between a single track or the full song and between different levels of processing for that track
