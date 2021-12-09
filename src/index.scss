@@ -9,12 +9,14 @@ html {
 
 body {
     width: 1200px;
-    background: linear-gradient(35deg, #ff7289, #cf9ff3 75%);
+    background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
 }
 
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 5px;
     box-shadow: -1px -1px 0px 2px black;
 }
@@ -69,9 +71,16 @@ div#page-contents{
 }
 
 button {
-    background-color: rgb(233, 233, 233);
+    // background-color: rgb(233, 233, 233);
+    background-color: rgba(115, 248, 226, 0.76);
+    border-radius: 10%;
+    border:black solid;
     margin: 0px;
     width: 125px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    box-shadow: rgb(73, 73, 73) -2px -2px 1px;
 }
 
 button#play {
@@ -84,7 +93,7 @@ button.soloed {
 }
 
 button.not-soloed {
-    background-color: lightgrey;
+    background-color: rgb(168, 164, 164);
 }
 
 button.selected {
@@ -93,7 +102,7 @@ button.selected {
 }
 
 div#nav-buttons {
-    align-self: center;
+    justify-self: right;
     width: 100px;
     display: inline;
     flex-direction: row;
@@ -112,7 +121,7 @@ button#solo-button {
 }
 
 button:hover {
-    background-color: rgb(180, 170, 175);
+    background-color: rgb(117, 188, 230);
     cursor: pointer;
     // box-shadow: grey 0px 2px 5px 2px;
     transition: box-shadow .1s;

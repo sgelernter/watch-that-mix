@@ -88,8 +88,8 @@ This project will be implemented using:
 
 #### Tuesday
 
- - Write in-page copy
- - Create mix visualizers, add them to slides
+ - ~~Write in-page copy~~
+ - ~~Create mix visualizers, add them to slides~~
  - ~~Generate mix charts~~
  - ~~Use D3 to add dynamic behavior to visualizers~~
  - ~~(Change source toggle buttons to radio elements?)~~
@@ -98,9 +98,9 @@ This project will be implemented using:
 
 #### Wednesday
 
- - Complete CSS styling for site
- - Have text and buttons displayed and arranged correctly
- - Misc. bug fixes/flair additions (animations, scroll/mouse interactions, etc.)
+ - ~~Complete CSS styling for site~~
+ - ~~Have text and buttons displayed and arranged correctly~~
+ - ~~Misc. bug fixes/flair additions (animations, scroll/mouse interactions, etc.)~~
  - Third-party review/testing (i.e. get a friend to try it out and offer feedback)
  - Add any feasible bonus features
 
