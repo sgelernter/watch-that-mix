@@ -217,7 +217,7 @@ Updating the DOM to contain the correct text, buttons, and set of active chart e
 
 #### Thursday
 
- - ~~~Spellcheck~~
+ - ~~Spellcheck~~
  - ~~Update documentation~~
 
 ## Bonus Features
