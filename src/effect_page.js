@@ -45,12 +45,12 @@ export class EffectPage {
     correctText(){
         const explainer = document.createElement('p');
         switch (this.pagename) {
-            case 'eq': explainer.innerHTML = `EQ (aka 'equalizing') is probably the tool that's easiest to get a handle on conceptually and one of the toughest to really get right in the mix.
-                                            Equalizing just means the process of boosting or cutting parts of a sound's frequency spectrum, exactly the same as you might do for a full song when you adjust 
-                                            the bass and treble on your car or home speakers. EQing in the context of a mix serves three main purposes: reducing unwanted noise, highlighting good noise, and 
+            case 'eq': explainer.innerHTML = `EQ (aka 'equalizing') is probably the tool that's easiest to get a handle on conceptually and one of the toughest to get right in the mix.
+                                            Equalizing is the process of boosting or cutting parts of a sound's frequency spectrum, exactly the same as you might do for a full song when you adjust 
+                                            the bass and treble on your car or home speakers. EQing serves three main purposes: reducing unwanted noise, highlighting good noise, and 
                                             creating space for all the song's elements to be heard alongside each other. The first two goals are pretty self-explanatory, but the third is the one that takes
                                             a lot of practice--sounds that occupy similar parts of the frequency spectrum will 'mask' one another in the mix if you're not careful, exactly the same way a lot
-                                            of voices in a room at a party might make it tough to discern what any one voice is saying. By strategically boosting and cutting different bits of each part of
+                                            of voices in a room at a party can make it tough to discern what any one voice is saying. By strategically boosting and cutting different bits of each part of
                                             the arrangement, a mix engineer can make sure everything sounds right in and of itself and make sure nothing in the mix is obscuring other parts of the song we want to hear.
                                             Check out the effect different amounts of EQ shaping have on the guitars in this track (use the "S" solo button to go back and forth between hearing only the relevant elements and the full context!).`;
                                             break;

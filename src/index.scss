@@ -1,11 +1,12 @@
 
 html {
     display: flex;
+    background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
 }
 
 body {
     width: 1200px;
-    background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
+    height: 1000px;
 }
 
 p {
@@ -44,6 +45,7 @@ svg#chart-container {
     border: solid rgb(134, 134, 134) 1px;
     float: left;
     margin: 15px;
+    margin-top: 3px;
     margin-right: 50px;
     box-shadow: 0px 3px 15px 8px rgb(210, 233, 255);
     background: linear-gradient(145deg, #ffb3cc 30%, #b6b9ff);
