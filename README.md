@@ -6,11 +6,15 @@ music enthusiasts wouldn't be able to tell you what a compressor does or the dif
 and a delay in the context of music production. The goal of this project is to teach anyone interested in 
 the process of how music gets made about some of the tools producers use when turning raw recorded performance 
 into a finished, radio-ready track. 
-    
+
+![basic effect page](./readme_images/basic_page.JPG)
+
 By providing an engaging, responsive interface to experiment with effects of various types of processing 
 in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
 music-making process that will hopefully enhance their understanding and appreciation for all the work that 
-goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint.    
+goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint. 
+
+![effect page-soloed track](./readme_images/solo_page.JPG)
 
 
 ## Functionality & MVPs
