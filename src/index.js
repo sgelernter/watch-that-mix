@@ -8,7 +8,6 @@ import { revealChart } from './charts_setup.js';
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    // let audioContext = new AudioContext();
     const pageList = ['fullmix', 'eq', 'comp', 'saturate', 'spatial'];
     let i = 0;
     const nextButton = document.getElementById('next');
@@ -17,9 +16,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     imports.createCharts(chartContainer);
 
     const updateButtons = function(){
+        d3.selectAll('.shape-dimmed')
+            .attr('class', 'shape');
+        d3.selectAll('.shape-featured-highlighted')
+            .attr('class', 'shape-featured');
         switch (i) {
             case 0: 
-                // debugger
                 prevButton.className = 'invisible';
                 nextButton.className = 'visible';
                 break;
@@ -28,7 +30,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 prevButton.className = 'visible';
                 break;
             default:
-                // debugger
                 nextButton.className = 'visible';
                 prevButton.className = 'visible';
         }
@@ -51,14 +52,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let currentPage = setCurrentPage();
     
     nextButton.addEventListener("click", function(){
-        // debugger
         i++;
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
 
     prevButton.addEventListener("click", function(){
-        // debugger
         console.log('where is the debugger');
         i--;
         currentPage.closeContext();
@@ -73,13 +72,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
         currentPage.closeContext();
         currentPage = setCurrentPage();
     })
-    
-    // const update = function(){
-    //     d3.selectAll('.shape')
-    //         .transition()
-    //         .duration(2000)
-    //         .style('opacity', '100%');
-    // }
-    // update();
     
 });

@@ -1,3 +1,4 @@
+import { takeRightWhile } from 'lodash';
 import * as audio from './nodes_creator';
 import { playButton } from './playbutton';
 import { SoloToggle } from './solo_button';
@@ -11,6 +12,9 @@ export class IntroPage {
         const play = playButton(this.context, this.nodeSet);
         const soloUnused = new SoloToggle(this.nodeSet, this.nodeSet);
         const container = document.getElementById('page-contents');
+        const title = document.createElement('h1');
+        title.innerHTML = "Watch That Mix!";
+        container.append(title);
         container.append(this.correctText());
         container.append(play);
         
@@ -28,6 +32,13 @@ export class IntroPage {
 
     correctText(){
         const explainer = document.createElement('p');
+        const mix = 'the mix'.italics();
+        explainer.innerHTML = `On a broad scale, the process of mixing just means taking the raw recorded tracks of each element in a song's arrangement and blending them together in such a way that they 'feel' right (quotes there mostly because music production is as 
+        subjective as anything else creative, and ultimately the only correct mix decision is one that sounds good to the producer!). On the following pages, we'll go into a few of the tools a mix engineer 
+        might use to get everything sitting right before sending a track off to mastering (which is an entirely different JS demo). Each page comes with a demo clip
+        that can be played and paused, along with a few before/after options for you to get an idea of what these tools actually sound like. The diagrams on the left are 
+        interactive representations of the mixes you'll be listening to, with each shape standing in for a different part of the arrangement. The y-axis represents frequency,
+        the x-axis represents panning in the stereo field, and depth represents elements that feel closer or farther from the listener.`;
         return explainer;
     }
 

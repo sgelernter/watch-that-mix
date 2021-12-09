@@ -11,29 +11,34 @@
     <script src="./dist/main.js"></script>
 </head>
 
+
 <body>
-    <h1> PAGE NAME </h1>
-    <div>
+    <!-- <header> -->
+        <div id='nav'>
+            <ul>
+                <li id='fullmix'>Full Mix</li>
+                <li id='eq'>EQ</li>
+                <li id='comp'>Compression</li>
+                <li id='saturate'>Saturation/Distortion</li>
+                <li id='spatial'>Spatial Effects</li>
+            </ul>
+        </div>
+    <!-- </header> -->
+    
+    <div id='charts-div'>
         <svg id='chart-container' viewBox="-5 0 230 290">
         </svg>
         <span id='chart-key'></span>
     </div>
-    <div class='d3-test'>
-
+    
+    <div id='page-contents'>    
     </div>
-    <div id='page-contents'> </div>
-    <br>
-    <button id='previous'>PREVIOUS</button>
-    <button id='next'>NEXT</button>
-    <div id='nav'>
-        <ul>
-            <li id='fullmix'>Full Mix</li>
-            <li id='eq'>EQ</li>
-            <li id='comp'>Compression</li>
-            <li id='saturate'>Saturation/Distortion</li>
-            <li id='spatial'>Spatial Effects</li>
-        </ul>
+        <br>
+    <div id='nav-buttons'>
+        <button id='previous'>PREVIOUS <<</button>
+        <button id='next'>NEXT >></button>
     </div>
 </body>
+
 
 </html>

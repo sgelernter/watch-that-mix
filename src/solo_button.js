@@ -18,8 +18,8 @@ export class SoloToggle {
                 that.button.className = 'not-soloed';
                 d3.selectAll('.shape-dimmed')
                     .attr('class', 'shape');
-                d3.select('#FEATURED')
-                    .attr('class', 'not-highlighted');
+                d3.selectAll('.shape-featured-highlighted')
+                    .attr('class', 'shape-featured');
             } else {
                 const fullIdx = fullNodes.indexOf(full);
                 full.muted = true;
@@ -28,12 +28,13 @@ export class SoloToggle {
                 // debugger
                 d3.selectAll('.shape')
                     .attr('class', 'shape-dimmed');
-                d3.select('#FEATURED')
-                    .attr('class', 'highlighted');
+                d3.selectAll('.shape-featured')
+                    .attr('class', 'shape-featured-highlighted');
             }
         })
         return this.button;
     }
+
     getCurrentNode(nodesArr) {
         let currentNode;
         nodesArr.forEach (function(node) {

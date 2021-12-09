@@ -19,23 +19,24 @@ const createCharts = function (container){
 
 const handleMouseOver = function(event) {
         const keyBox = document.getElementById('chart-key');
-        if (event.target.getAttribute('class') === 'shape') {
+        const el = event.target;
+        const elClass = el.getAttribute('class');
+        if (elClass) {
             // debugger
-            keyBox.innerHTML = `This shape represents the: ${event.target.getAttribute('name')}`;
+            if (elClass.includes('shape') && el.getAttribute('opacity') !== '0%') {keyBox.innerHTML = `This shape is the ${event.target.getAttribute('name')}`};
         };
     }
 
 const handleMouseLeave = function(event) {
         const keyBox = document.getElementById('chart-key');
-        if (event.target.getAttribute('class') !== 'shape') {
-            keyBox.innerHTML = "";
-        };
+        keyBox.innerHTML = "";
     }
 
 const revealShapes = function(shapes, container){
     allCharts.forEach ((chart) => {hideShapes(chart, container)});
     shapes.forEach ((shape) => {
         shape.setAttribute('opacity', '85%');
+        shape.setAttribute('pointer-events', 'auto');
     })
     container.addEventListener('mouseover', handleMouseOver);
     container.addEventListener('mouseleave', handleMouseLeave);
@@ -44,7 +45,7 @@ const revealShapes = function(shapes, container){
 const hideShapes = function(shapes, container){
     shapes.forEach ((shape) => {
         shape.setAttribute('opacity', '0%');
-        // console.log('see a shape do a thing');
+        shape.setAttribute('pointer-events', 'none');
     });
     // debugger
     container.removeEventListener('mouseover', handleMouseOver);

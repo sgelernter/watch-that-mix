@@ -2,51 +2,85 @@
     visibility: hidden;
 }
 
+
+html {
+    display: flex;
+}
+
 body {
-    // display: flex;
-    height: 600px;
-    background-color: rgb(251, 253, 251);
+    width: 1200px;
+    background: linear-gradient(35deg, #ff7289, #cf9ff3 75%);
 }
 
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 25px;
+    padding: 5px;
+    box-shadow: -1px -1px 0px 2px black;
 }
 
 h1 {
-    display: block;
-    margin: auto;
+    align-self: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    text-shadow: whitesmoke 1px 1px 4px;
 }
 
+h2 {
+    align-self: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-shadow: whitesmoke 1px 1px 4px;
+}
+
+@keyframes gradient-shift{
+
+}
 
 svg#chart-container {
-    height: 600px;
+    height: 570px;
     width: 500px;
     position: relative;
-    border: solid black 1px;
+    border: solid rgb(134, 134, 134) 1px;
     float: left;
     margin: 15px;
     margin-right: 50px;
-    background: linear-gradient(145deg, #ffb3cc, #b6b9ff);
-    // z-index: 1;
+    box-shadow: 0px 3px 15px 8px rgb(210, 233, 255);
+    background: linear-gradient(145deg, #ffb3cc 30%, #b6b9ff);
 }
 
 svg > * {
     transition: visibility 2s;
 }
 
-button {
+div#charts-div {
     display: block;
-    background-color: lightgrey;
-    margin: 5px;
+    margin-top: 5px;
+    // float: top;
+}
+
+div#page-contents{
+    margin: 25px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: rgb(233, 233, 233);
+    margin: 0px;
+    width: 125px;
 }
 
 button#play {
-    margin-top: 50px;
+    display: inline;
 }
 
 
 button.soloed {
-    background-color: rgb(255, 252, 80);
+    background-color: rgb(238, 228, 91);
 }
 
 button.not-soloed {
@@ -58,58 +92,117 @@ button.selected {
     box-shadow: inset 1px 1px 1px rgb(54, 54, 54);
 }
 
-button#next {
-    height: 20px;
+div#nav-buttons {
     align-self: center;
+    width: 100px;
+    display: inline;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+button#next {
+    align-self: center;
+    width: 100px;
+}
+
+button#solo-button {
+    width: 25px;
+    margin: 5px;
+    display: inline;
+}
+
+button:hover {
+    background-color: rgb(180, 170, 175);
+    cursor: pointer;
+    // box-shadow: grey 0px 2px 5px 2px;
+    transition: box-shadow .1s;
 }
 
 div#nav ul{
     display: flex;
+    justify-content: space-around;
+    margin-left: 175px;
+    padding-top: 5px;
     flex-direction: row;
-    // border: 1px solid black;
-    border-radius: 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    // justify-self: right;
 }
 
 ul li {
     margin: 15px;
     cursor: pointer;
+    transform: rotate(-10deg);
+    display: block;
 }
 
-button:hover {
-    background-color: rgb(253, 156, 205);
-    cursor: pointer;
-    box-shadow: grey 0px 2px 5px 2px;
-    transition: box-shadow .1s;
+ul li:hover {
+    text-shadow: 0px 0px 15px rgb(13, 255, 235), 0px 0px 3px white;
+    transition: text-shadow .2s;
 }
 
-.shape {
+div#charts-div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    float: left;
+}
+
+div span {
+    align-self: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 60px;
+}
+
+.shape, .shape-featured {
     fill-opacity: 95%;
     backdrop-filter: blur(20px);
-    transition: fill .5s, fill-opacity .5s, opacity 1.5s;
+    transition: fill 1.5s, fill-opacity .5s, opacity 1.2s;
 }
 
-.shape:hover {
+.shape:hover, .shape-featured:hover {
     stroke:rgb(255, 255, 255);
-    stroke-width: 2px;
-    stroke-opacity: 60%;
+    stroke-width: 3px;
+    stroke-opacity: 20%;
     filter: blur(.5px);
+    filter: brightness(135%);
+    transition: filter .1s;
 }
 
 .shape-dimmed {
     fill: grey;
     fill-opacity: 30%;
-    transition: fill 2s, fill-opacity .3s;
+    transition: fill 1.5s, fill-opacity 1.5s;
 }
-    
-.highlighted#FEATURED {
-    fill: gold;
-    box-shadow: rgb(97, 88, 36) 20px 20px 20px 20px;
+
+@keyframes highlight-pulse {
+    0%      {filter: brightness(100%)}
+    25%     {filter: brightness(130%)}
+    50%     {filter: brightness(180%); fill: rgba(99, 221, 221, 0.911)}
+    75%     {filter: brightness(130%)}
+    100%    {filter: brightness(100%)}
+}
+
+.shape-featured-highlighted {
+    fill: rgba(255, 227, 69, 0.801);
+    stop-color: gold;
+    stop-color: blue;
     position: relative;
-    z-index: 5;
-    transition: fill 1s;
+    stroke: white;
+    stroke-width: 1px;
+    stroke-opacity: 50%;
+    fill-opacity: 97%;
+    transition: fill .7s;
+    animation-name: highlight-pulse;
+    animation-delay: .8s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .not-highlighted{
     fill: blue;
-    transition: fill .5s;
+    transition: fill 2s;
 }
