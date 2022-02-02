@@ -109,9 +109,8 @@ div#charts-div {
 }
 
 div#page-contents {
-  margin: 25px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin: auto;
+  max-width: 50vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
