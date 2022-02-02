@@ -1,4 +1,276 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}ul,ol{list-style:none}
-html{display:flex;background:linear-gradient(35deg, #ff7289, #cf9ff3 65%)}body{width:1200px;height:925px}p{font-family:"Franklin Gothic Medium","Arial Narrow",Arial,sans-serif;margin:25px;margin-top:15px;margin-bottom:15px;padding:5px;box-shadow:-1px -1px 0px 2px #000}h1{align-self:center;font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;font-size:35px;text-shadow:#fff7f7 2px 1px 4px;font-weight:bolder}h2{align-self:center;justify-self:center;font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;font-size:25px;text-shadow:#f5f5f5 1px 1px 4px}@keyframes gradient-shift{}svg#chart-container{height:570px;width:500px;position:relative;border:solid #868686 1px;float:left;margin:15px;margin-top:3px;margin-right:50px;box-shadow:0px 3px 15px 8px #d2e9ff;background:linear-gradient(145deg, #ffb3cc 30%, #b6b9ff)}svg>*{transition:visibility 2s}div#charts-div{display:block;margin-top:5px}div#page-contents{margin:25px;margin-right:5px;margin-bottom:5px;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:space-evenly}button{background-color:rgba(115,248,226,.918);border-radius:10%;border:#000 solid;margin:0px;width:125px;font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;font-weight:bold;color:#000;box-shadow:#494949 -2px -2px 1px}button#play{display:inline}button.soloed{background-color:#eee45b;box-shadow:inset 1px 1px 1px #363636}button.not-soloed{background-color:#a8a4a4}button.selected{background-color:#6ac3ff;box-shadow:inset 1px 1px 1px #363636}div#nav-buttons{justify-self:right;width:100px;display:inline;flex-direction:row;margin-bottom:25px}button#next{align-self:center;width:100px}button#solo-button{width:25px;margin:5px;display:inline}button:hover{background-color:#75bce6;cursor:pointer;transition:box-shadow .1s}div#nav ul{display:flex;justify-content:space-around;margin-left:175px;padding-top:5px;flex-direction:row;font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;font-style:oblique}ul li{margin:15px;cursor:pointer;transform:rotate(-10deg);display:block}ul li:hover{text-shadow:0px 0px 15px #0dffeb,0px 0px 3px #fff;transition:text-shadow .2s}div#charts-div{display:flex;flex-wrap:wrap;flex-direction:column;float:left}div span{align-self:center;font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;font-size:20px;font-weight:bold;margin-right:60px}.shape,.shape-featured{fill-opacity:95%;backdrop-filter:blur(20px);transition:fill 1.5s,fill-opacity .5s,opacity 1.2s}.shape:hover,.shape-featured:hover{stroke:#fff;stroke-width:3px;stroke-opacity:20%;filter:blur(0.5px);filter:brightness(135%);transition:filter .1s}.shape-dimmed{fill:gray;fill-opacity:30%;transition:fill 1.5s,fill-opacity 1.5s}@keyframes highlight-pulse{0%{filter:brightness(100%)}25%{filter:brightness(130%)}50%{filter:brightness(180%);fill:rgba(99,221,221,.911)}75%{filter:brightness(130%)}100%{filter:brightness(100%)}}.shape-featured-highlighted{fill:rgba(255,227,69,.801);stop-color:gold;stop-color:blue;position:relative;stroke:#fff;stroke-width:1px;stroke-opacity:50%;fill-opacity:97%;transition:fill .7s;animation-name:highlight-pulse;animation-delay:.8s;animation-duration:2s;animation-timing-function:linear;animation-iteration-count:infinite}.not-highlighted{fill:blue;transition:fill 2s}.invisible{visibility:hidden}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/reset.css ***!
+  \************************************************************************************************************************************/
+/* adapted from --> http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* from: https://piccalil.li/blog/a-modern-css-reset/ 
+Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+body {
+  background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: -1px -1px 0px 2px black;
+}
+
+h1 {
+  align-self: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  text-shadow: #fff7f7 2px 1px 4px;
+  font-weight: bolder;
+}
+
+h2 {
+  align-self: center;
+  justify-self: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: whitesmoke 1px 1px 4px;
+}
+
+@keyframes gradient-shift {}
+svg#chart-container {
+  height: 570px;
+  width: 500px;
+  position: relative;
+  border: solid #868686 1px;
+  float: left;
+  margin: 15px;
+  margin-top: 3px;
+  margin-right: 50px;
+  box-shadow: 0px 3px 15px 8px #d2e9ff;
+  background: linear-gradient(145deg, #ffb3cc 30%, #b6b9ff);
+}
+
+svg > * {
+  transition: visibility 2s;
+}
+
+div#charts-div {
+  display: block;
+  margin-top: 5px;
+}
+
+div#page-contents {
+  margin: 25px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: rgba(115, 248, 226, 0.918);
+  border-radius: 10%;
+  border: black solid;
+  margin: 0px;
+  width: 125px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: black;
+  box-shadow: #494949 -2px -2px 1px;
+}
+
+button#play {
+  display: inline;
+}
+
+button.soloed {
+  background-color: #eee45b;
+  box-shadow: inset 1px 1px 1px #363636;
+}
+
+button.not-soloed {
+  background-color: #a8a4a4;
+}
+
+button.selected {
+  background-color: #6ac3ff;
+  box-shadow: inset 1px 1px 1px #363636;
+}
+
+div#nav-buttons {
+  justify-self: right;
+  width: 100px;
+  display: inline;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+button#next {
+  align-self: center;
+  width: 100px;
+}
+
+button#solo-button {
+  width: 25px;
+  margin: 5px;
+  display: inline;
+}
+
+button:hover {
+  background-color: #75bce6;
+  cursor: pointer;
+  transition: box-shadow 0.1s;
+}
+
+div#nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 175px;
+  padding-top: 5px;
+  flex-direction: row;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: oblique;
+}
+
+ul li {
+  margin: 15px;
+  cursor: pointer;
+  transform: rotate(-10deg);
+  display: block;
+}
+
+ul li:hover {
+  text-shadow: 0px 0px 15px #0dffeb, 0px 0px 3px white;
+  transition: text-shadow 0.2s;
+}
+
+div#charts-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  float: left;
+}
+
+div span {
+  align-self: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+.shape, .shape-featured {
+  fill-opacity: 95%;
+  backdrop-filter: blur(20px);
+  transition: fill 1.5s, fill-opacity 0.5s, opacity 1.2s;
+}
+
+.shape:hover, .shape-featured:hover {
+  stroke: white;
+  stroke-width: 3px;
+  stroke-opacity: 20%;
+  filter: blur(0.5px);
+  filter: brightness(135%);
+  transition: filter 0.1s;
+}
+
+.shape-dimmed {
+  fill: grey;
+  fill-opacity: 30%;
+  transition: fill 1.5s, fill-opacity 1.5s;
+}
+
+@keyframes highlight-pulse {
+  0% {
+    filter: brightness(100%);
+  }
+  25% {
+    filter: brightness(130%);
+  }
+  50% {
+    filter: brightness(180%);
+    fill: rgba(99, 221, 221, 0.911);
+  }
+  75% {
+    filter: brightness(130%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+.shape-featured-highlighted {
+  fill: rgba(255, 227, 69, 0.801);
+  stop-color: gold;
+  stop-color: blue;
+  position: relative;
+  stroke: white;
+  stroke-width: 1px;
+  stroke-opacity: 50%;
+  fill-opacity: 97%;
+  transition: fill 0.7s;
+  animation-name: highlight-pulse;
+  animation-delay: 0.8s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.not-highlighted {
+  fill: blue;
+  transition: fill 2s;
+}
+
+.invisible {
+  visibility: hidden;
+}

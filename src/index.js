@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
     prevButton.addEventListener("click", function(){
-        console.log('where is the debugger');
         i--;
         currentPage.closeContext();
         currentPage = setCurrentPage();

@@ -1,12 +1,7 @@
-
-html {
-    display: flex;
-    background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
-}
-
 body {
-    width: 1200px;
-    height: 925px;
+    background: linear-gradient(35deg, #ff7289, #cf9ff3 65%);
+    width: 100vw;
+    height: 100vh;
 }
 
 p {
@@ -14,7 +9,7 @@ p {
     margin: 25px;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 5px;
+    padding: 10px;
     box-shadow: -1px -1px 0px 2px black;
 }
 
@@ -30,7 +25,8 @@ h2 {
     align-self: center;
     justify-self: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: bold;
     text-shadow: whitesmoke 1px 1px 4px;
 }
 
