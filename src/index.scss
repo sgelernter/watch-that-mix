@@ -125,22 +125,34 @@ button:hover {
     transition: box-shadow .1s;
 }
 
-div#nav ul{
+div#nav{
     display: flex;
-    justify-content: space-around;
-    margin-left: 175px;
     padding-top: 5px;
-    flex-direction: row;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    // justify-self: right;
-}
+    justify-content: space-between;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5px;
+        flex-direction: row;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-style: oblique;
+        &.page-nav{
+            // border: 1px solid black;
+            width: 70%;
+            position: relative;
+            left: 15vw;
+        }
+    }
+} 
 
 ul li {
     margin: 15px;
     cursor: pointer;
     transform: rotate(-10deg);
     display: block;
+    i{
+        transform: rotate(10deg);
+    }
 }
 
 ul li:hover {

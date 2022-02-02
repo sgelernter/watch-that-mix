@@ -173,14 +173,23 @@ button:hover {
   transition: box-shadow 0.1s;
 }
 
+div#nav {
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-between;
+}
 div#nav ul {
   display: flex;
   justify-content: space-around;
-  margin-left: 175px;
   padding-top: 5px;
   flex-direction: row;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-style: oblique;
+}
+div#nav ul.page-nav {
+  width: 70%;
+  position: relative;
+  left: 15vw;
 }
 
 ul li {
@@ -188,6 +197,9 @@ ul li {
   cursor: pointer;
   transform: rotate(-10deg);
   display: block;
+}
+ul li i {
+  transform: rotate(10deg);
 }
 
 ul li:hover {
