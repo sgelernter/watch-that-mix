@@ -1,4 +1,4 @@
-![Watch that mix! logo](./watchthatmix.png)
+![Watch that mix! logo](./watchthatmix.png | width=100)
 
 ## About
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
