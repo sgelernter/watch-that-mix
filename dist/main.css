@@ -210,7 +210,6 @@ div#charts-div {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  float: left;
 }
 
 div span {
@@ -284,4 +283,20 @@ div span {
 
 .invisible {
   visibility: hidden;
+}
+
+#page-full {
+  display: flex;
+}
+#page-full #page-right {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: left;
+}
+#page-full #page-right #nav-buttons {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  height: 30px;
 }
