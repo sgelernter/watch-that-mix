@@ -1,10 +1,12 @@
 <img src="./watchthatmix.png" alt="Watch that mix! logo" width="200"/>
 
+[Watch that mix! - Live site](https://sgelernter.github.io/watch-that-mix/)
+
 ## About
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
 The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
 music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
-and a delay in the context of music production. The goal of this project ([which you can visit here](https://sgelernter.github.io/watch-that-mix/)) is to teach anyone interested in 
+and a delay in the context of music production. The goal of this project is to teach anyone interested in 
 the process of how music gets made about some of the tools producers use when turning raw recorded performance 
 into a finished, radio-ready track. 
 
