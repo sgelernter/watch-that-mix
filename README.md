@@ -1,5 +1,6 @@
-## About
+![Watch that mix! logo](./watchthatmix.png)
 
+## About
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
 The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
 music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
