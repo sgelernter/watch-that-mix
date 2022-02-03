@@ -21,9 +21,9 @@ into a finished, radio-ready track.
 ![basic effect page](./readme_images/basic_page.JPG)
 
 By providing an engaging, responsive interface to experiment with effects of various types of processing 
-in-context and in real time, this project will allow users to develop some hands-on knowledge of the 
+in-context and in real time, "Watch that mix!" allows users to develop some hands-on knowledge of the 
 music-making process that will hopefully enhance their understanding and appreciation for all the work that 
-goes into making their favorite songs sound the way they sound from both a technical and artistic standpoint. 
+goes into making their favorite songs sound the way they sound, both from a technical and from an artistic standpoint. 
 
 ![effect page-soloed track](./readme_images/solo_page.JPG)
 
@@ -40,7 +40,7 @@ This project is implemented using:
 
 ## Features and Functionality
 
-In "Watch That Mix!", users will be able to:
+In "Watch That Mix!", users are able to:
 
 - Play and pause audio clips that will loop until stopped
 - Change qualities of the sound they're listening to in real time
@@ -48,12 +48,12 @@ In "Watch That Mix!", users will be able to:
 - Hear the effects a variety of types of processing have on elements of a song, both isolated and in-context
 - Navigate between sections of the interactive experience without having to reload their browser
 
-In addition, this project will include:
+In addition, this project includes:
 
 - This highly-informational README document
 - Dynamically-animated transitions between display states (e.g. slide changes, mix element highlighting)
 - Intuitive visualizations to help focus the user's attention for a more engaging experience
-- A major sense of accomplishment on behalf of its author if/when he manages to get all of the above done
+- A sense of accomplishment on behalf of its author
 
 ## Site Wireframes
 
