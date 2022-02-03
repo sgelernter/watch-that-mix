@@ -1,4 +1,4 @@
-![Watch that mix! logo](./watchthatmix.png | width=100)
+<img src="./watchthatmix.png" alt="Watch that mix! logo" width="200"/>
 
 ## About
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
