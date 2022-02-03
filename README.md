@@ -1,8 +1,16 @@
 <img src="./watchthatmix.png" alt="Watch that mix! logo" width="200"/>
 
+# Watch that mix!
 [Watch that mix! - Live site](https://sgelernter.github.io/watch-that-mix/)
 
-## About
+### Table of Contents
+- [Description](#description)
+- [Technologies](#techs)
+- [Features & Functionality](#features)
+- [Site Wireframes](#wireframes)
+- [Code Highlights](#code)
+
+## Description {#description}
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
 The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
 music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
@@ -19,8 +27,18 @@ goes into making their favorite songs sound the way they sound from both a techn
 
 ![effect page-soloed track](./readme_images/solo_page.JPG)
 
+## Technologies, Libraries, & APIs {#techs}
 
-## Functionality & MVPs
+This project will be implemented using:
+
+- The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to load and control audio elements and playback
+- [Webpack](https://webpack.js.org/) to bundle JS code
+- [Babel](https://babeljs.io/) to transpile JS code
+- [npm](https://www.npmjs.com/) to manage dependencies
+- [D3](https://d3js.org/) API to enable dynamic mix visualizations
+- [Inkscape](https://inkscape.org/) to generate SVG shapes 
+
+## Features & Functionality {#features}
 
 In "Watch That Mix!", users will be able to:
 
@@ -37,7 +55,7 @@ In addition, this project will include:
 - Intuitive visualizations to help focus the user's attention for a more engaging experience
 - A major sense of accomplishment on behalf of its author if/when he manages to get all of the above done
 
-## Wireframes
+## Wireframes {#wireframes}
 
 ###             Initial Landing Page:
 
@@ -62,18 +80,8 @@ In addition, this project will include:
 - Users can play/pause looped audio, toggling what they hear between a single track or the full song and between different levels of processing for that track
 - Processors are planned to include: EQ, compression, saturation/distortion, modulation, pitch shift, and spatial effects (reverb or delay) 
 
-## Technologies, Libraries, & APIs
 
-This project will be implemented using:
-
-- The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to load and control audio elements and playback
-- [Webpack](https://webpack.js.org/) to bundle JS code
-- [Babel](https://babeljs.io/) to transpile JS code
-- [npm](https://www.npmjs.com/) to manage dependencies
-- [D3](https://d3js.org/) API to enable dynamic mix visualizations
-- [Inkscape](https://inkscape.org/) to generate SVG shapes 
-
-## Code Highlights
+## Code Highlights {#code}
 
 The idea of generating all of the shapes required to make interactive mix charts seemed daunting until I found a program (Inkscape) that allows for creation of shapes in a GUI and export a set of HTML objects. That still left the task of creating and formatting dozens of individual shapes of different types within my project. This was the method I wrote to solve that problem, which takes in a POJO with data for a group of unknown types of objects and returns a usable array filled with java-ready SVG shapes:
 ```javascript
@@ -178,7 +186,7 @@ Updating the DOM to contain the correct text, buttons, and set of active chart e
 
 ```
 
-
+<!-- 
 ## Implementation Timeline
 
 #### Friday
@@ -227,4 +235,4 @@ Updating the DOM to contain the correct text, buttons, and set of active chart e
 
  - Less-essential processors (pitch shift), additional processing options within individual processors (different types of modulation, saturating groups of tracks)
  - Advanced processing types (pitch correction, sample triggers, *parallel compression*)
- - __SUPER DUPER BONUS:__ bonus page with interactive mixer, including faders for individual song elements that control track volume and panning 
+ - __SUPER DUPER BONUS:__ bonus page with interactive mixer, including faders for individual song elements that control track volume and panning  -->
