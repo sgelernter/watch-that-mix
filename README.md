@@ -38,7 +38,7 @@ This project is implemented using:
 - [D3](https://d3js.org/) API to enable dynamic mix visualizations
 - [Inkscape](https://inkscape.org/) to generate SVG shapes 
 
-## Features & Functionality
+## Features and Functionality
 
 In "Watch That Mix!", users will be able to:
 
