@@ -6,7 +6,7 @@
 ### Table of Contents
 - [Description](#description)
 - [Technologies](#technologies)
-- [Features & Functionality](#features-&-functionality)
+- [Features and Functionality](#features-and-functionality)
 - [Site Wireframes](#site-wireframes)
 - [Code Highlights](#code-highlights)
 
