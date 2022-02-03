@@ -8,9 +8,9 @@
 - [Technologies](#techs)
 - [Features & Functionality](#features)
 - [Site Wireframes](#wireframes)
-- [Code Highlights](#code)
+- [Code Highlights](#code-highlights)
 
-## Description {#description}
+## Description
 Pretty much everyone enjoys music, but most people know little if anything about how music is produced. 
 The functions of microphones, instruments, and performers are all pretty self-explanatory, but even many 
 music enthusiasts wouldn't be able to tell you what a compressor does or the difference between a reverb 
@@ -27,9 +27,9 @@ goes into making their favorite songs sound the way they sound from both a techn
 
 ![effect page-soloed track](./readme_images/solo_page.JPG)
 
-## Technologies, Libraries, & APIs {#techs}
+## Technologies
 
-This project will be implemented using:
+This project is implemented using:
 
 - The [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to load and control audio elements and playback
 - [Webpack](https://webpack.js.org/) to bundle JS code
@@ -38,7 +38,7 @@ This project will be implemented using:
 - [D3](https://d3js.org/) API to enable dynamic mix visualizations
 - [Inkscape](https://inkscape.org/) to generate SVG shapes 
 
-## Features & Functionality {#features}
+## Features & Functionality
 
 In "Watch That Mix!", users will be able to:
 
@@ -55,7 +55,7 @@ In addition, this project will include:
 - Intuitive visualizations to help focus the user's attention for a more engaging experience
 - A major sense of accomplishment on behalf of its author if/when he manages to get all of the above done
 
-## Wireframes {#wireframes}
+## Site Wireframes
 
 ###             Initial Landing Page:
 
@@ -81,7 +81,7 @@ In addition, this project will include:
 - Processors are planned to include: EQ, compression, saturation/distortion, modulation, pitch shift, and spatial effects (reverb or delay) 
 
 
-## Code Highlights {#code}
+## Code Highlights
 
 The idea of generating all of the shapes required to make interactive mix charts seemed daunting until I found a program (Inkscape) that allows for creation of shapes in a GUI and export a set of HTML objects. That still left the task of creating and formatting dozens of individual shapes of different types within my project. This was the method I wrote to solve that problem, which takes in a POJO with data for a group of unknown types of objects and returns a usable array filled with java-ready SVG shapes:
 ```javascript
