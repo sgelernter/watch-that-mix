@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             .attr('class', 'shape-featured');
         switch (i) {
             case 0: 
-                prevButton.className = 'invisible';
+                prevButton.className = 'disabled';
                 nextButton.className = 'visible';
                 break;
             case (pageList.length - 1):
-                nextButton.className = 'invisible';
+                nextButton.className = 'disabled';
                 prevButton.className = 'visible';
                 break;
             default:

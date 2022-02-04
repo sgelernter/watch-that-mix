@@ -10,6 +10,7 @@ p {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 10px;
+    margin-left: 0px;
     box-shadow: -1px -1px 0px 2px black;
 }
 
@@ -54,13 +55,9 @@ svg > * {
 div#charts-div {
     display: block;
     margin-top: 5px;
-    // float: top;
 }
 
 div#page-contents{
-    // margin: 25px;
-    // margin-right: 5px;
-    // margin-bottom: 5px;
     margin: auto;
     max-width: 50vw;
     display: flex;
@@ -101,21 +98,17 @@ button.selected {
     box-shadow: inset 1px 1px 1px rgb(54, 54, 54);
 }
 
-div#nav-buttons {
-    justify-self: right;
-    width: 100px;
-    display: inline;
-    flex-direction: row;
-    margin-bottom: 25px;
-}
+// div#nav-buttons {
+//     display: inline;
+// }
 
-button#next {
-    align-self: center;
-    width: 100px;
-}
+// button#next {
+//     // align-self: center;
+//     // width: 100px;
+// }
 
 button#solo-button {
-    width: 25px;
+    width: 30px;
     margin: 5px;
     display: inline;
 }
@@ -131,6 +124,7 @@ div#nav{
     display: flex;
     padding-top: 5px;
     justify-content: space-between;
+    // padding-bottom: 10px;
     ul{
         display: flex;
         justify-content: space-around;
@@ -173,6 +167,8 @@ div span {
     font-size: 20px;
     font-weight: bold;
     margin-right: 60px;
+    position: absolute;
+    top: 675px;
 }
 
 .shape, .shape-featured {
@@ -235,13 +231,28 @@ div span {
     #page-right{
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
+        justify-content: space-around;
         align-items: left;
+        border: 1px solid red;
+        button.toggle{
+            font-size: 12px;
+        }
         #nav-buttons{
             display: flex;
-            width: 35%;
+            max-width: 290px;
             justify-content: space-between;
-            height: 30px;
+            height: 40px;
+            position: absolute;
+            top: 635px;
+            button{
+                margin-right: 10px;
+                align-self: center;
+                height: 30px;
+            }
+            .disabled{
+                background-color: rgb(179, 179, 179);
+                pointer-events: none;
+            }
         }
     }
 }

@@ -14,9 +14,13 @@ export class IntroPage {
         const soloUnused = new SoloToggle(this.nodeSet, this.nodeSet);
         const container = document.getElementById('page-contents');
         const title = document.createElement('h1');
+        // const playBox = document.getElementById('play-solo');
+        // const togglerBox = document.getElementById('togglers');
         title.innerHTML = "Watch That Mix!";
         container.append(title);
         container.append(this.correctText());
+        // container.append(playBox);
+        // container.append(togglerBox);
         container.append(play);
         
         const that = this;
