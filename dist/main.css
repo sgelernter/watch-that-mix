@@ -289,7 +289,7 @@ div span {
 }
 #page-full #page-right #nav-buttons {
   display: flex;
-  max-width: 290px;
+  max-width: 291px;
   justify-content: space-between;
   height: 40px;
   position: absolute;
