@@ -58,7 +58,7 @@ div#charts-div {
 }
 
 div#page-contents{
-    margin: auto;
+    // margin: auto;
     max-width: 50vw;
     display: flex;
     flex-wrap: wrap;
@@ -124,7 +124,7 @@ div#nav{
     display: flex;
     padding-top: 5px;
     justify-content: space-between;
-    // padding-bottom: 10px;
+    padding-bottom: 5px;
     ul{
         display: flex;
         justify-content: space-around;
@@ -231,9 +231,8 @@ div span {
     #page-right{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        padding-top: 5px;
         align-items: left;
-        border: 1px solid red;
         button.toggle{
             font-size: 12px;
         }
@@ -243,7 +242,7 @@ div span {
             justify-content: space-between;
             height: 40px;
             position: absolute;
-            top: 635px;
+            top: 630px;
             button{
                 margin-right: 10px;
                 align-self: center;
